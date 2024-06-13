@@ -1,0 +1,27 @@
+version: "3.8"
+services:
+  nodejs:
+    entrypoint: .docker/entrypoint.sh
+    build:
+      context: .
+      dockerfile: ./api/Dockerfile
+    ports:
+      - 8000:8000
+    environment:
+      - DATABASE_URL=file:./dev.db
+    volumes:
+      - ./api:/api
+    image: "nodejs"
+    container_name: api-todolist
+  web:
+    entrypoint: .docker/entrypoint.sh
+    build:
+      context: .
+      dockerfile: ./web/Dockerfile
+    ports:
+      - 5173:5173
+    volumes:
+      - ./web:/web
+      - /web/node_modules
+    image: "nodejs-web"
+    container_name: web-todolist

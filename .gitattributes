@@ -1,0 +1,3 @@
+# Read about this settings at https://git-scm.com/docs/gitattributes
+* text=auto
+*.sh text eol=lf

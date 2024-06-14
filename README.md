@@ -1,5 +1,9 @@
 # Grand Finale
 
+|                                                  Aplicação Web                                                  |                                                Aplicação Mobile                                                 |
+| :-------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------: |
+| ![image](https://github.com/gabrielvictorweb/grand-finale/assets/42915445/040e7792-aa76-43f1-aafb-94a90646c460) | ![image](https://github.com/gabrielvictorweb/grand-finale/assets/42915445/a346a946-b5aa-464c-a4e8-54065e987b68) |
+
 O projeto Grand Finale é uma atividade realizada por Gabriel Victor e Leandro Almeida, alunos da FIAP. O projeto conta com uma aplicação web e mobile, de uma lista de tarefas. Também conta com uma API desenvolvida para integração das aplicações.
 
 ## Dependências

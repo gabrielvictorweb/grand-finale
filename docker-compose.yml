@@ -7,6 +7,9 @@ services:
       dockerfile: ./api/Dockerfile
     ports:
       - 8000:8000
+    depends_on:
+      - web
+      - app
     environment:
       - DATABASE_URL=file:./dev.db
     volumes:
@@ -22,7 +25,7 @@ services:
       context: .
       dockerfile: ./web/Dockerfile
     ports:
-      - 5173:5173
+      - 5173:5173    
     volumes:
       - ./web:/web
       - /web/node_modules
@@ -39,7 +42,7 @@ services:
     ports:
       - 8081:8081
       - 19001:19001
-      - 19002:19002
+      - 19002:19002   
     volumes:
       - ./app:/app
       - /app/node_modules

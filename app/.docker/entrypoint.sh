@@ -1,3 +1,3 @@
 #!/bin/sh
 
-npm run web
+npm run web -c

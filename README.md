@@ -47,7 +47,20 @@ $ npm run dev
 
 ### Com Android Studio (Recomendado)
 
-Recomendamos o uso da virtualização do Android Studio para a execução do aplicativo. Para executar, é só ir em 'More Actions' na tela inicial do Android Studio e ir em 'Virtual Device Manager'. Caso contrário (utilizando a opção seguinte), será necessário alterar a variável de ambiente EXPO_PUBLIC_API_URL presente em app/.env para o endereço IP LOCAL de seu computador.
+Recomendamos o uso da virtualização do Android Studio para a execução do aplicativo.Caso contrário (utilizando a opção seguinte), será necessário alterar a variável de ambiente EXPO_PUBLIC_API_URL presente em app/.env para o endereço IP LOCAL de seu computador.
+
+No Android Studio, execute os seguintes passos:
+
+- 1° Vá em More Action
+- 2° Virtual Device Manager
+- 3° Crie um dispositivo virtual
+- 4° Execute o dispositivo virtual
+- 5° Execute os seguintes comandos em seu Terminal/Prompt de comando:
+```
+$ cd pasta-de-downloads/grand-finale/app
+$ npm install
+$ npm start
+```
 
 ### Com Expo App
 

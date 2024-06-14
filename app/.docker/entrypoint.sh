@@ -1,3 +1,3 @@
 #!/bin/sh
 
-npm run web -c
+npx expo start --web

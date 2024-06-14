@@ -1,11 +1,11 @@
-import React from "react";
-import { Button, ScrollView, StyleSheet } from "react-native";
-import { Text, TextInput, View } from "@/components/Themed";
-import { deleteTask, getTasks, saveTask, updateTask } from "@/services/tasks";
-import { Task as ITask } from "@/services/tasks/interfaces";
 import { Task } from "@/components";
 import { Modal } from "@/components/Modal";
-import { SubmitHandler, useForm } from "react-hook-form";
+import { Text, TextInput, View } from "@/components/Themed";
+import { deleteTask, getTasks, saveTask, updateTask } from "@/services/tasks";
+import type { Task as ITask } from "@/services/tasks/interfaces";
+import React from "react";
+import { type SubmitHandler, useForm } from "react-hook-form";
+import { Button, ScrollView, StyleSheet } from "react-native";
 import DateTimePickerModal from "react-native-modal-datetime-picker";
 
 export default function TabOneScreen() {
@@ -56,8 +56,7 @@ export default function TabOneScreen() {
       await loadTasks();
 
       setAdd(false);
-      throw new Error("Error when try insert task");
-    } catch (e) {}
+    } catch (e) { }
   };
 
   const handleSubmitUpdate = async (values: ITask) => {
@@ -69,9 +68,7 @@ export default function TabOneScreen() {
       await updateTask(payload, task.id);
       await loadTasks();
       setTask(undefined);
-
-      throw new Error("Error when try insert task");
-    } catch (e) {}
+    } catch (e) { }
   };
 
   const handleDelete = async () => {
@@ -81,9 +78,7 @@ export default function TabOneScreen() {
       await deleteTask(task.id);
       await loadTasks();
       setTask(undefined);
-
-      throw new Error("Error when try insert task");
-    } catch (e) {}
+    } catch (e) { }
   };
 
   React.useEffect(() => {
@@ -160,10 +155,10 @@ export default function TabOneScreen() {
                 title={
                   watch("limit_time")
                     ? new Date(watch("limit_time")).toLocaleString([], {
-                        day: "2-digit",
-                        month: "long",
-                        year: "numeric",
-                      })
+                      day: "2-digit",
+                      month: "long",
+                      year: "numeric",
+                    })
                     : "SELECIONE UMA DATA"
                 }
               />
@@ -236,10 +231,10 @@ export default function TabOneScreen() {
                 title={
                   watch("limit_time")
                     ? new Date(watch("limit_time")).toLocaleString([], {
-                        day: "2-digit",
-                        month: "long",
-                        year: "numeric",
-                      })
+                      day: "2-digit",
+                      month: "long",
+                      year: "numeric",
+                    })
                     : "SELECIONE UMA DATA"
                 }
               />

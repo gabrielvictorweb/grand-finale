@@ -13,6 +13,9 @@ services:
       - ./api:/api
     image: "nodejs"
     container_name: api-todolist
+    networks:
+      vpcbr:
+        ipv4_address: 10.5.0.5
   web:
     entrypoint: .docker/entrypoint.sh
     build:
@@ -25,3 +28,13 @@ services:
       - /web/node_modules
     image: "nodejs-web"
     container_name: web-todolist
+    networks:
+      vpcbr:
+        ipv4_address: 10.5.0.6
+networks:
+  vpcbr:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.5.0.0/16
+          gateway: 10.5.0.1

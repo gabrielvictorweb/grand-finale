@@ -47,7 +47,7 @@ $ npm run dev
 
 ### Com Android Studio (Recomendado)
 
-Recomendamos o uso do Android Studio para a execução do aplicativo, caso contrário (utilizando a opção seguinte) será necessário alterar a variavel de ambiente EXPO_PUBLIC_API_URL presente em app/.env para o endereço IP LOCAL de seu computador.
+Recomendamos o uso da virtualização do Android Studio para a execução do aplicativo. Para executar, é só ir em 'More Actions' na tela inicial do Android Studio e ir em 'Virtual Device Manager'. Caso contrário (utilizando a opção seguinte), será necessário alterar a variável de ambiente EXPO_PUBLIC_API_URL presente em app/.env para o endereço IP LOCAL de seu computador.
 
 ### Com Expo App
 

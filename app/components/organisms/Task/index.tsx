@@ -1,6 +1,6 @@
-import React from "react";
-import { Task as ITask } from "@/services/tasks/interfaces";
 import { Text, View } from "@/components/Themed";
+import type { Task as ITask } from "@/services/tasks/interfaces";
+import type React from "react";
 import { TouchableOpacity } from "react-native";
 
 function limitWord(input: string, maxLength: number) {
@@ -36,7 +36,7 @@ export const Task: React.FC<ITask & IClick> = ({
         lightColor="#fff"
       >
         <Text style={{ fontSize: 20 }} darkColor="#666">
-          {limitWord(title, 6)}
+          {limitWord(title, 20)}
         </Text>
         <Text darkColor="#666">{limitWord(description, 20)}</Text>
         <Text style={{ textAlign: "right" }} darkColor="#666">

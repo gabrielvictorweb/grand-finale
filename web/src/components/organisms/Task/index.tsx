@@ -1,13 +1,6 @@
-import React from "react";
+import type { Task as ITask } from "@/services/tasks/interfaces";
+import type React from "react";
 import * as S from "./styles";
-import { Task as ITask } from "@/services/tasks/interfaces";
-
-function limitWord(input: string, maxLength: number) {
-  if (input.length > maxLength) {
-    return input.substring(0, maxLength) + "...";
-  }
-  return input;
-}
 
 interface IClick {
   onClick: () => void;
@@ -29,8 +22,8 @@ export const Task: React.FC<ITask & IClick> = ({
 
   return (
     <S.Container onClick={onClick}>
-      <S.Title>{limitWord(title, 6)}</S.Title>
-      <S.Description>{limitWord(description, 20)}</S.Description>
+      <S.Title>{title}</S.Title>
+      <S.Description>{description}</S.Description>
       <S.Limit>Data Limite: {limit}</S.Limit>
     </S.Container>
   );

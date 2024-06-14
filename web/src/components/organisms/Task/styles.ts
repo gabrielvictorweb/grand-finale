@@ -19,12 +19,16 @@ export const Container = styled.div`
 export const Title = styled.h1`
   color: #000;
 
+  text-overflow: ellipsis;
+
   font-size: 1.4rem;
   font-weight: 400;
 `;
 
 export const Description = styled.p`
   font-size: 1rem;
+
+  text-overflow: ellipsis;
 
   word-break: break-all;
 

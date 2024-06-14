@@ -31,6 +31,23 @@ services:
     networks:
       vpcbr:
         ipv4_address: 10.5.0.6
+  app:
+    entrypoint: .docker/entrypoint.sh
+    build:
+      context: .
+      dockerfile: ./app/Dockerfile
+    ports:
+      - 8081:8081
+      - 19001:19001
+      - 19002:19002
+    volumes:
+      - ./app:/app
+      - /app/node_modules
+    image: "nodejs-app"
+    container_name: app-todolist
+    networks:
+      vpcbr:
+        ipv4_address: 10.5.0.7
 networks:
   vpcbr:
     driver: bridge

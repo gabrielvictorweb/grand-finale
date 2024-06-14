@@ -18,6 +18,14 @@ $ docker-compose build
 $ docker-compose up
 ```
 
+**Endereço Aplicação Web**: http://localhost:5173/
+
+**Endereço Aplicação Mobile**: http://localhost:8081/
+
+- Utilizando o Docker, o Aplicativo será compilado para executar em seu navegador, para facilitar a visualização. Por esse motivo, alguns recursos nativos não funcionam corretamente, como por exemplo, a **_seleção de data limite de uma tarefa_**. Caso queira executa-lo em um Dispotivo Virtual (Android Studio ou Genymotion), execute o aplicativo utilizando o NPM, o passo a passo se encontra-se na sessão abaixo.
+
+**Endereço Api**: http://localhost:8000/api
+
 ### Opção 2: NPM
 
 Em seu terminal de comando, faça os seguintes processos:
@@ -25,8 +33,7 @@ Em seu terminal de comando, faça os seguintes processos:
 #### Executando a API
 
 ```
-$ cd pasta-de-downloads/grand-finale
-$ cd api
+$ cd pasta-de-downloads/grand-finale/api
 $ npm install
 $ npx prisma generate
 $ npx prisma db push
@@ -47,7 +54,7 @@ $ npm run dev
 
 ### Com Android Studio (Recomendado)
 
-Recomendamos o uso da virtualização do Android Studio para a execução do aplicativo.Caso contrário (utilizando a opção seguinte), será necessário alterar a variável de ambiente EXPO_PUBLIC_API_URL presente em app/.env para o endereço IP LOCAL de seu computador.
+Recomendamos o uso da virtualização do Android Studio para a execução do aplicativo.Caso contrário (utilizando a opção seguinte), será necessário alterar a variável de ambiente EXPO_PUBLIC_API_URL presente em `grand-finale/app/.env` para o endereço IP LOCAL de seu computador.
 
 No Android Studio, execute os seguintes passos:
 
@@ -56,6 +63,7 @@ No Android Studio, execute os seguintes passos:
 - 3° Crie um dispositivo virtual
 - 4° Execute o dispositivo virtual
 - 5° Execute os seguintes comandos em seu Terminal/Prompt de comando:
+
 ```
 $ cd pasta-de-downloads/grand-finale/app
 $ npm install
@@ -69,7 +77,7 @@ $ cd pasta-de-downloads/grand-finale/app
 $ npm install
 $ npm start
 
----- Leia o código QR utilizando o aplicativo 'Expo app' ----
+---- Leia o código QR utilizando o aplicativo 'Expo App' ----
 ```
 
 ## Documentação da API (Swagger)
@@ -97,7 +105,8 @@ O motivo pela escolha do JavaScript como linguagem do projeto, foi principalment
 
 - JavaScript
 - NestJS
+- Prisma ORM
+- Swagger
 - React Native
 - React
 - Docker
-- Swagger

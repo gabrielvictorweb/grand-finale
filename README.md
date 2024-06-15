@@ -32,6 +32,8 @@ $ docker-compose up
 
 ### Opção 2: NPM
 
+Obs: Ao executar a aplicação com NPM, será necessário alterar os arquivos `grand-finale/web/.env` e `grand-finale/app/.env`, as variáveis **_VITE_URL_API_** e **_EXPO_PUBLIC_API_URL_** devem possuir seu **_IP LOCAL_**.
+
 Em seu terminal de comando, faça os seguintes processos:
 
 #### Executando a API
@@ -114,3 +116,4 @@ O motivo pela escolha do JavaScript como linguagem do projeto, foi principalment
 - React Native
 - React
 - Docker
+- SQLite
